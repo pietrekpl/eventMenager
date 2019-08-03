@@ -10,8 +10,15 @@
 <head>
     <title>Title</title>
 </head>
-<body>
+<body style="background-color: lightsalmon; font-family: 'Comic Sans MS'">
 <h1>Event Manager Application</h1>
+
+<h2 style="box-shadow: ivory">Find your best place to party!</h2>
+<br>
+<a href="/createUser">Create new User</a><br>
+<a href="/createEvent">Create Event</a><br>
+<a href="/showEventList">Show List of events</a>
+
 
 </body>
 </html>
