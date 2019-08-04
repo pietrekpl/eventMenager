@@ -19,7 +19,9 @@
 <a href="/createEvent">Create Event</a><br>
 <a href="/showEventList">Show List of events</a><br>
 <a href="/showUserList">Show User List</a>
-
-
+<br>
+<br>
+<a href="/login">LOG IN</a><br>
+<a href = "/logout">LOG OUT</a>
 </body>
 </html>
