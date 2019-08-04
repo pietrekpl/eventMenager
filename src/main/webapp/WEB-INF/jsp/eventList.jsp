@@ -9,9 +9,17 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
+    <link href='https://fonts.googleapis.com/css?family=Amatic SC' rel='stylesheet'>
+    <style>
+        body {
+            font-family: 'Amatic SC';font-size: 24px;
+            font-weight: bold;
+            color: black;
+        }
+    </style>
 
 </head>
-<body style="background-color: lightsalmon; font-family: 'Comic Sans MS'">
+<body style="background-color: white;">
 <title>Event List</title>
 <h1>List of Events : </h1>
 <c:forEach var="event" items="${eventList}">

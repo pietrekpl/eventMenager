@@ -8,9 +8,17 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
+    <link href='https://fonts.googleapis.com/css?family=Amatic SC' rel='stylesheet'>
     <title>Confirm Event</title>
+    <style>
+        body {
+            font-family: 'Amatic SC';font-size: 24px;
+            font-weight: bold;
+            color: black;
+        }
+    </style>
 </head>
-<body style="background-color: lightsalmon; font-family: 'Comic Sans MS'">
+<body style="background-color: white; ">
 <h1> Event create successful</h1>
 Event : ${event.name}
 <br>

@@ -9,19 +9,38 @@
 <html>
 <head>
     <title>Title</title>
-</head>
-<body style="background-color: lightsalmon; font-family: 'Comic Sans MS'">
-<h1>Event Manager Application</h1>
+    <link href='https://fonts.googleapis.com/css?family=Amatic SC' rel='stylesheet'>
+    <style>
+        body {
+            font-family: 'Amatic SC';font-size: 24px;
+            font-weight: bold;
+            color: black;
+        }
+    </style>
 
-<h2 style="box-shadow: ivory">Find your best place to party!</h2>
+</head>
+<body style="background-color: white; ">
+<h1>Event Manager Application</h1>
+<div style="position:absolute; right: 400px">
+    <p style="font-weight: bold">Find Amazing places near you</p>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d161355.00149752767!2d18.98268626209002!3d50.809453740056725!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4710b5c54e2ca8af%3A0x854f0d4d1a178236!2sCz%C4%99stochowa!5e0!3m2!1spl!2spl!4v1564934342013!5m2!1spl!2spl" width="600" height="330" frameborder="0" style="border:0" allowfullscreen></iframe>
+</div>
+
+
+<h2 >Entertainment.<br>
+      Simply.<br>
+       Simply Amazing.</h2>
 <br>
 <a href="/createUser">Create new User</a><br>
+<br>
 <a href="/createEvent">Create Event</a><br>
+<br>
 <a href="/showEventList">Show List of events</a><br>
+<br>
 <a href="/showUserList">Show User List</a>
 <br>
 <br>
-<a href="/login">LOG IN</a><br>
-<a href = "/logout">LOG OUT</a>
+<button style="color: goldenrod; font-family: 'Amatic SC';font-size: 27px; "><a href="/login">LOG IN</a><br></button>
+<button style="color: goldenrod; font-family: 'Amatic SC';font-size: 27px;"><a href = "/logout">LOG OUT</a></button>
 </body>
 </html>

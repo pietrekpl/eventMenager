@@ -9,14 +9,21 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
+    <link href='https://fonts.googleapis.com/css?family=Amatic SC' rel='stylesheet'>
     <title>Create Event</title>
+    <style>
+        .errors{
+            color: red;
+        }
+        body {
+            font-family: 'Amatic SC';font-size: 24px;
+            font-weight: bold;
+            color: black;
+        }
+    </style>
 </head>
-<style>
-    .errors{
-        color: red;
-    }
-</style>
-<body style="background-color: lightsalmon; font-family: 'Comic Sans MS'">
+
+<body style="background-color: white;">
 <h1>Create event</h1>
 <br>
 <form:form method="POST" action="/createEvent/confirm" modelAttribute="event">

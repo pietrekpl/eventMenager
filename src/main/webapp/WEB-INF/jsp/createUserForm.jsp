@@ -10,14 +10,21 @@
 <html>
 <head>
     <title>Create User</title>
-</head>
-<style>
-    .errors {
-        color: red;
-    }
+    <link href='https://fonts.googleapis.com/css?family=Amatic SC' rel='stylesheet'>
+    <style>
+        .errors {
+            color: red;
+        }
+        body {
+            font-family: 'Amatic SC';font-size: 24px;
+            font-weight: bold;
+            color: black;
+        }
 
-</style>
-<body style="background-color: lightsalmon; font-family: 'Comic Sans MS'">
+    </style>
+</head>
+
+<body style="background-color: white;">
 
 <h1>Create new User :</h1>
 <br>
