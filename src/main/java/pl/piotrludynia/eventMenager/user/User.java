@@ -4,23 +4,26 @@ package pl.piotrludynia.eventMenager.user;
 import org.springframework.format.annotation.DateTimeFormat;
 
 
-
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotEmpty;
 import java.time.LocalDate;
 
 
-
+@Entity
 public class User {
-
-
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
     @NotEmpty(message = "This field can't be empty")
     private String name;
     @NotEmpty(message = "This field can't be empty")
     private String lastName;
     @NotEmpty(message = "This field can't be empty")
     private String login;
-    @Min(value = 5L, message = "Password should have at least 5 characters")
     private String password;
     private String email;
     @DateTimeFormat(pattern = "yyyy-MM-dd")
@@ -29,6 +32,15 @@ public class User {
 
     public User() {
 
+    }
+
+    public User(@NotEmpty(message = "This field can't be empty") String name, @NotEmpty(message = "This field can't be empty") String lastName, @NotEmpty(message = "This field can't be empty") String login,  String password, String email, LocalDate date) {
+        this.name = name;
+        this.lastName = lastName;
+        this.login = login;
+        this.password = password;
+        this.email = email;
+        this.date = date;
     }
 
     public String getName() {
@@ -77,5 +89,9 @@ public class User {
 
     public void setDate(LocalDate date) {
         this.date = date;
+    }
+
+    public Long getId() {
+        return id;
     }
 }

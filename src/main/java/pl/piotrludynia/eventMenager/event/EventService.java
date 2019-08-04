@@ -2,11 +2,10 @@ package pl.piotrludynia.eventMenager.event;
 
 
 import org.springframework.stereotype.Service;
-import pl.piotrludynia.eventMenager.event.Event;
-import pl.piotrludynia.eventMenager.event.EventRepository;
-
 import java.time.LocalDate;
 import java.util.List;
+
+
 
 @Service
 public class EventService {

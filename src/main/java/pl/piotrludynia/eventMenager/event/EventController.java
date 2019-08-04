@@ -20,14 +20,14 @@ public class EventController {
 
     @RequestMapping(value = "/createEvent", method = RequestMethod.GET)
     public String createEvent(@ModelAttribute("event") Event event) {
-
         return "createEvent";
     }
 
     @RequestMapping(value = "/createEvent/confirm", method = RequestMethod.POST)
     public String confirmEvent(@Valid @ModelAttribute("event") Event event, BindingResult result,Model model) {
         try {
-            boolean score = eventService.created(event.getName(),event.getLocalization(),event.getDate(),event.getAccess());
+            boolean score = eventService.created(event.getName(),event.getLocalization(),
+                    event.getDate(),event.getAccess());
             model.addAttribute("eventCreated",score);
 
         }catch (Exception e){
@@ -52,7 +52,8 @@ public class EventController {
         model.addAttribute("eventList",listOfEvents);
         return "eventList";
     }
-   
+
+
 
 
 

@@ -17,7 +17,8 @@
 <br>
 <a href="/createUser">Create new User</a><br>
 <a href="/createEvent">Create Event</a><br>
-<a href="/showEventList">Show List of events</a>
+<a href="/showEventList">Show List of events</a><br>
+<a href="/showUserList">Show User List</a>
 
 
 </body>

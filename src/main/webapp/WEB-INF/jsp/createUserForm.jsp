@@ -28,8 +28,7 @@
     <form:errors path="lastName" cssClass="errors"> </form:errors><br>
     Login : <form:input path="login"></form:input>
     <form:errors path="login" cssClass="errors"> </form:errors><br>
-    Password : <form:password path="password"></form:password>
-    <form:errors path="password" cssClass="errors"></form:errors><br>
+    Password : <form:password path="password"></form:password><br>
     Email : <form:input path="email"></form:input><br>
     Date Birth : <form:input path="date" type="date"></form:input>
 
