@@ -16,20 +16,17 @@
             font-weight: bold;
             color: black;
         }
+
     </style>
 </head>
 <body style="background-color: white; ">
-<h1>User Confirmed</h1>
-Login : ${user.login}
-<br>
-First Name : ${user.name}
-<br>
-Last Name : ${user.lastName}
-<br>
-Email : ${user.email}
-<br>
-Date of Birth : ${user.date}
-<br>
+
+        Login: ${user.login}<br> First Name: ${user.name}<br>
+        Last Name:${user.lastName}<br>Email: ${user.email}<br>
+        Date of Birth:${user.date}<br>
+
+
+
 <a href="/">Back to main menu</a>
 </body>
 </html>

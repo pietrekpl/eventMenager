@@ -8,13 +8,16 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Title</title>
+    <title>Main Menu</title>
     <link href='https://fonts.googleapis.com/css?family=Amatic SC' rel='stylesheet'>
     <style>
         body {
             font-family: 'Amatic SC';font-size: 24px;
             font-weight: bold;
             color: black;
+        }
+        a:hover{
+            background-color: darkgray;
         }
     </style>
 
@@ -28,7 +31,7 @@
 
 
 <h2 >Entertainment.<br>
-      Simply.<br>
+      Made Simply.<br>
        Simply Amazing.</h2>
 <br>
 <a href="/createUser">Create new User</a><br>
