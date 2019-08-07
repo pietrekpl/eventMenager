@@ -38,7 +38,8 @@
             </form:select>
 
 
-    <input type="submit" value="Submit">
+    <input type="submit" value="Submit"><br>
+    <a href="/save/${event.id}">Save</a>
     <a href="/">Return to main menu</a>
 
 
