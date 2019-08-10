@@ -2,15 +2,14 @@ package pl.piotrludynia.eventMenager.user;
 
 
 import org.springframework.format.annotation.DateTimeFormat;
+import pl.piotrludynia.eventMenager.event.Event;
 
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotEmpty;
 import java.time.LocalDate;
+import java.util.List;
 
 
 @Entity
@@ -28,6 +27,13 @@ public class User {
     private String email;
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private LocalDate date;
+
+    @ManyToMany(mappedBy = "users")
+    private List<Event> events;
+
+
+
+
 
 
     public User() {

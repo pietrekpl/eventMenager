@@ -3,13 +3,13 @@ package pl.piotrludynia.eventMenager.event;
 
 
 import org.springframework.format.annotation.DateTimeFormat;
+import pl.piotrludynia.eventMenager.user.User;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
 import java.time.LocalDate;
+import java.util.List;
+
 @Entity
 public class Event {
     @Id
@@ -22,6 +22,14 @@ public class Event {
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private LocalDate date;
     private String access;
+
+    @ManyToMany
+    @JoinTable(
+            name = "EVENT_TO_USER",
+            joinColumns = { @JoinColumn(name = "event_id") },
+            inverseJoinColumns = { @JoinColumn(name = "user_id") }
+    )
+    private List<User> users;
 
 
     public Event() {

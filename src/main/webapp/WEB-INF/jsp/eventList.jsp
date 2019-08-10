@@ -23,7 +23,7 @@
 <title>Event List</title>
 <h1>List of Events : </h1>
 <form method="get" action="/searchEvents">
-    <label>Search localization:</label>
+    <label>Search event:</label>
     <input type="text" name="phrase"/>
     <input type="submit" value="Search" />
 </form>
