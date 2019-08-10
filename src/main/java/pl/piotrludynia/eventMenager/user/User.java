@@ -31,10 +31,13 @@ public class User {
     @ManyToMany(mappedBy = "users")
     private List<Event> events;
 
+    public List<Event> getEvents() {
+        return events;
+    }
 
-
-
-
+    public void setEvents(List<Event> events) {
+        this.events = events;
+    }
 
     public User() {
 

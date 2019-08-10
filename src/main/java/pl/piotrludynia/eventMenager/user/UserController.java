@@ -1,6 +1,7 @@
 package pl.piotrludynia.eventMenager.user;
 
 
+import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -55,5 +56,11 @@ public class UserController {
         List<User> listOfUsers = userService.listOfUsers();
         model.addAttribute("userList",listOfUsers);
         return "userList";
+    }
+
+    @GetMapping("/user/join")
+    public String userJoin(@RequestParam Long id, Authentication auth){
+       userService.addUserToEvent(id, auth.getName());
+       return "joinUserToEvent";
     }
 }

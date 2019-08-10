@@ -8,6 +8,7 @@ import pl.piotrludynia.eventMenager.user.User;
 import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -23,13 +24,22 @@ public class Event {
     private LocalDate date;
     private String access;
 
-    @ManyToMany
+    @ManyToMany()
     @JoinTable(
             name = "EVENT_TO_USER",
             joinColumns = { @JoinColumn(name = "event_id") },
             inverseJoinColumns = { @JoinColumn(name = "user_id") }
     )
-    private List<User> users;
+    private List<User> users = new ArrayList<>();
+
+    public List<User> getUsers() {
+        return users;
+    }
+
+    public void setUsers(List<User> users) {
+        this.users = users;
+    }
+
 
 
     public Event() {
