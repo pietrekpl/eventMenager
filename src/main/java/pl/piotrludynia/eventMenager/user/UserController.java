@@ -59,8 +59,15 @@ public class UserController {
     }
 
     @GetMapping("/user/join")
-    public String userJoin(@RequestParam Long id, Authentication auth){
-       userService.addUserToEvent(id, auth.getName());
-       return "joinUserToEvent";
+    public String userJoin(@RequestParam Long id, Authentication auth) {
+        userService.addUserToEvent(id, auth.getName());
+        return "joinUserToEvent";
+    }
+    @RequestMapping(value = "/showDetails/{id}",method = RequestMethod.GET)
+    public String showDetails(@PathVariable long id,  Model model){
+        List<User> listOfUsers = userService.listOfUsers();
+        model.addAttribute("users",listOfUsers);
+        model.addAttribute("countUsers",userService.countUsers(id));
+        return "eventDetails";
     }
 }

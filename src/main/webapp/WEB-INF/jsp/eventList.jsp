@@ -35,6 +35,7 @@
         <a href="/delete/${event.id}">Delete </a>
         <a href="/edit/${event.id}">Edit</a>
         <a href="/user/join?id=${event.id}">Join Event</a>
+        <a href="/showDetails/${event.id}">Show Details</a>
 
     </div>
 

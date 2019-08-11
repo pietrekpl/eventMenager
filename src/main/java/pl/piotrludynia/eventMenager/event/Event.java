@@ -27,8 +27,8 @@ public class Event {
     @ManyToMany()
     @JoinTable(
             name = "EVENT_TO_USER",
-            joinColumns = { @JoinColumn(name = "event_id") },
-            inverseJoinColumns = { @JoinColumn(name = "user_id") }
+            joinColumns = {@JoinColumn(name = "event_id")},
+            inverseJoinColumns = {@JoinColumn(name = "user_id")}
     )
     private List<User> users = new ArrayList<>();
 

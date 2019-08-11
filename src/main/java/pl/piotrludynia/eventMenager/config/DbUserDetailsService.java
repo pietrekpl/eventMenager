@@ -7,6 +7,7 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Component;
 import pl.piotrludynia.eventMenager.user.User;
 import pl.piotrludynia.eventMenager.user.UserRepository;
+
 import java.util.Collections;
 
 
@@ -22,10 +23,10 @@ class DbUserDetailsService implements UserDetailsService {
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         User user = userRepository.findByLogin(username)
-            .orElseThrow(() -> new IllegalArgumentException("Invalid username"));
+                .orElseThrow(() -> new IllegalArgumentException("Invalid username"));
 
-;
+        ;
         return new org.springframework.security.core.userdetails.User(user.getLogin(), user.getPassword(),
-            Collections.emptyList());
+                Collections.emptyList());
     }
 }

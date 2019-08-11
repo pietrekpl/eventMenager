@@ -40,10 +40,9 @@ public class User {
     }
 
     public User() {
-
     }
 
-    public User(@NotEmpty(message = "This field can't be empty") String name, @NotEmpty(message = "This field can't be empty") String lastName, @NotEmpty(message = "This field can't be empty") String login,  String password, String email, LocalDate date) {
+    public User(@NotEmpty(message = "This field can't be empty") String name, @NotEmpty(message = "This field can't be empty") String lastName, @NotEmpty(message = "This field can't be empty") String login, String password, String email, LocalDate date) {
         this.name = name;
         this.lastName = lastName;
         this.login = login;

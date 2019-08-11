@@ -45,5 +45,6 @@
 <br>
 <button style="color: goldenrod; font-family: 'Amatic SC';font-size: 27px; "><a href="/login">LOG IN</a><br></button>
 <button style="color: goldenrod; font-family: 'Amatic SC';font-size: 27px;"><a href = "/logout">LOG OUT</a></button>
+
 </body>
 </html>

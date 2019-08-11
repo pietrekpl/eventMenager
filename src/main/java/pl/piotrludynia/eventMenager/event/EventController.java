@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
+import pl.piotrludynia.eventMenager.user.User;
 
 import javax.validation.Valid;
 import java.awt.*;
@@ -62,18 +63,18 @@ public class EventController {
 
     @RequestMapping(value = "/edit/{id}", method = RequestMethod.GET)
     public String editEvent(@PathVariable long id, Model model) {
-            model.addAttribute("event",eventService.get(id) );
-            model.addAttribute("eventList", eventService.listOfEvents());
+        model.addAttribute("event", eventService.get(id));
+        model.addAttribute("eventList", eventService.listOfEvents());
 
-            return "edit";
+        return "edit";
     }
 
     @RequestMapping(value = "/edit/{id}/save", method = RequestMethod.POST, consumes = MediaType.APPLICATION_FORM_URLENCODED_VALUE)
-    public String saveEvent(Model model, @PathVariable Long id,@RequestParam String name, @RequestParam String localization,
-                                @RequestParam @DateTimeFormat(pattern = "yyyy-MM-dd") LocalDate date) {
-        eventService.update(id,name,localization,date);
-        model.addAttribute("event",eventService.listOfEvents());
-        
+    public String saveEvent(Model model, @PathVariable Long id, @RequestParam String name, @RequestParam String localization,
+                            @RequestParam @DateTimeFormat(pattern = "yyyy-MM-dd") LocalDate date) {
+        eventService.update(id, name, localization, date);
+        model.addAttribute("event", eventService.listOfEvents());
+
         return "editSuccess";
     }
 
@@ -82,8 +83,6 @@ public class EventController {
         model.addAttribute("eventList", eventService.findEveryEvent(phrase));
         return "eventList";
     }
-
-
 
 
 }

@@ -23,31 +23,35 @@ public class UserService {
         this.eventRepository = eventRepository;
     }
 
-    List<User> listOfUsers(){
+    List<User> listOfUsers() {
         return userRepository.findAll();
     }
 
-    boolean created (String name, String lastName,String login,String password,String email, LocalDate date){
-        User user  = new User(name,lastName,login,passwordEncoder.encode(password),email,date);
+    boolean created(String name, String lastName, String login, String password, String email, LocalDate date) {
+        User user = new User(name, lastName, login, passwordEncoder.encode(password), email, date);
         User created = userRepository.save(user);
-        return  created.getId() != null;
+        return created.getId() != null;
     }
 
     public void deleteUser(long id) {
         userRepository.deleteById(id);
     }
 
-    private User findByName(String name){
+    private User findByName(String name) {
         return userRepository.findByLogin(name)
-                .orElseThrow(()-> new NoSuchElementException("User not found"));
+                .orElseThrow(() -> new NoSuchElementException("User not found"));
     }
 
-    public Event addUserToEvent(Long id, String name){
+    public Event addUserToEvent(Long id, String name) {
         User user1 = findByName(name);
         Event event = eventRepository.findById(id)
-                .orElseThrow(()-> new NoSuchElementException("User not found"));
+                .orElseThrow(() -> new NoSuchElementException("User not found"));
         event.getUsers().add(user1);
 
         return eventRepository.save(event);
+    }
+
+    public int countUsers(long id) {
+        return userRepository.numberOfUsersAttendEvent(id);
     }
 }
