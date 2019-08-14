@@ -19,10 +19,41 @@
         a:hover{
             background-color: darkgray;
         }
+        .clock {
+            font-size: 4em;
+        }
+
     </style>
 
 </head>
 <body style="background-color: white; ">
+<script>
+    function clock() {// We create a new Date object and assign it to a variable called "time".
+        var time = new Date(),
+
+            // Access the "getHours" method on the Date object with the dot accessor.
+            hours = time.getHours(),
+
+            // Access the "getMinutes" method with the dot accessor.
+            minutes = time.getMinutes(),
+
+
+            seconds = time.getSeconds();
+
+        document.querySelectorAll('.clock')[0].innerHTML = harold(hours) + ":" + harold(minutes) + ":" + harold(seconds);
+
+        function harold(standIn) {
+            if (standIn < 10) {
+                standIn = '0' + standIn
+            }
+            return standIn;
+        }
+    }
+    setInterval(clock, 1000);
+
+</script>
+<div class="clock" style="position: fixed; right: 400px; top: 10px"></div>
+
 <h1>Event Manager Application</h1>
 <div style="position:absolute; right: 400px">
     <p style="font-weight: bold">Find Amazing places near you</p>

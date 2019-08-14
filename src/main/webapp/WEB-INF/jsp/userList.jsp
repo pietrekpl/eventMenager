@@ -26,11 +26,13 @@
 </c:if>
 <h1>User List : </h1>
 <c:forEach var="user" items="${userList}">
-    <div>   ${user.name} <br>
-            ${user.lastName} <br>
-            ${user.login} <br>
-            ${user.date}<br>
-            ${user.email}<br>
+    <div style="border-style: solid; border-color: black; border-width: 2px">
+             Name: ${user.name} <br>
+             Last Name: ${user.lastName} <br>
+             Login: ${user.login} <br>
+             Birth Date: ${user.date}<br>
+             Email: ${user.email}
+        <br>
         <a href="/deleteUser/${user.id}">Delete</a>
     </div>
 

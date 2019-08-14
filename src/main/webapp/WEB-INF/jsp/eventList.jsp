@@ -23,19 +23,21 @@
 <title>Event List</title>
 <h1>List of Events : </h1>
 <form method="get" action="/searchEvents">
-    <label>Search event:</label>
+    <label>Search event by name:</label>
     <input type="text" name="phrase"/>
     <input type="submit" value="Search" />
 </form>
 <c:forEach var="event" items="${eventList}">
-    <div>   ${event.name} <br>
-            ${event.localization}<br>
-            ${event.date}
+    <div style="border-style: solid; border-color: black; border-width: 2px">
+            Event: ${event.name} <br>
+            Localization: ${event.localization}<br>
+            Date: ${event.date}
         <br>
         <a href="/delete/${event.id}">Delete </a>
         <a href="/edit/${event.id}">Edit</a>
         <a href="/user/join?id=${event.id}">Join Event</a>
         <a href="/showDetails/${event.id}">Show Details</a>
+        <a href="/showDetails/${event.id}/comment">Comment</a>
 
     </div>
 

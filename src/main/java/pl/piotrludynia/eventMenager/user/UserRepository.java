@@ -19,6 +19,14 @@ public interface UserRepository extends JpaRepository<User, Long> {
 
     @Query(value = "Select count(EVENT_ID) from EVENT_TO_USER where EVENT_ID = ?", nativeQuery = true)
     int numberOfUsersAttendEvent(@Param("id") Long id);
+
+
+
+
+
+
+
+
 }
 
 

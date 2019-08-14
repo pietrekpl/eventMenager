@@ -27,6 +27,8 @@ public class UserService {
         return userRepository.findAll();
     }
 
+
+
     boolean created(String name, String lastName, String login, String password, String email, LocalDate date) {
         User user = new User(name, lastName, login, passwordEncoder.encode(password), email, date);
         User created = userRepository.save(user);
@@ -54,4 +56,6 @@ public class UserService {
     public int countUsers(long id) {
         return userRepository.numberOfUsersAttendEvent(id);
     }
+
+
 }

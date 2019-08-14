@@ -6,6 +6,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
+import pl.piotrludynia.eventMenager.event.Event;
 import pl.piotrludynia.eventMenager.user.User;
 
 import javax.validation.Valid;
@@ -67,6 +68,7 @@ public class UserController {
     public String showDetails(@PathVariable long id,  Model model){
         List<User> listOfUsers = userService.listOfUsers();
         model.addAttribute("users",listOfUsers);
+        model.addAttribute("event",new Event());
         model.addAttribute("countUsers",userService.countUsers(id));
         return "eventDetails";
     }

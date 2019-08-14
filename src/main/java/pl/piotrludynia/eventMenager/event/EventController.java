@@ -2,15 +2,11 @@ package pl.piotrludynia.eventMenager.event;
 
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.MediaType;
-import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
-import pl.piotrludynia.eventMenager.user.User;
-
 import javax.validation.Valid;
-import java.awt.*;
 import java.time.LocalDate;
 import java.util.List;
 
