@@ -27,6 +27,7 @@
     ${comment.author}: ${comment.content}<br>
     </div>
 </c:forEach>
+<a href="/">Return to Main Menu</a>
 
 
 </body>

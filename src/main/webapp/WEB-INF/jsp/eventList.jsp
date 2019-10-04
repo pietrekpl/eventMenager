@@ -38,6 +38,7 @@
         <a href="/user/join?id=${event.id}">Join Event</a>
         <a href="/showDetails/${event.id}">Show Details</a>
         <a href="/showDetails/${event.id}/comment">Comment</a>
+        <a href=""
 
     </div>
 
